@@ -3,6 +3,7 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
@@ -28,10 +29,10 @@ public class TabTest {
             String window2 = null; // инициализируем переменную window2 как null.
             for (String window : currentWindows) {
                 if (!window.equals(window1)) { // если window не равен window1
-                    window2 = window; // то в window2 записывыаем актуальный для него дескрпитор
-                    break;
+                   window2 = window; // то в window2 записывыаем актуальный для него дескрпитор
+                   break;
                 }
-            };
+        };
             driver.switchTo().window(window2); // переключение на новую вкладку с новым url
             driver.get("https://mail.ru/");
             driver.close();// закрытие текущую влкдаки
