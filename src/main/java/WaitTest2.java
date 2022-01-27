@@ -1,4 +1,3 @@
-import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -10,9 +9,7 @@ import java.time.Duration;
 import java.util.List;
 
 public class WaitTest2 {
-
-    @Test
-    public void testWaits2(){
+    public static void main(String[] args) {
         System.setProperty("webdriver.chrome.driver", "C:\\webdrivers\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();

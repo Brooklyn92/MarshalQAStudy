@@ -1,4 +1,3 @@
-import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -10,8 +9,7 @@ import java.util.concurrent.TimeUnit;
 import static org.openqa.selenium.support.ui.ExpectedConditions.alertIsPresent;
 
 public class ModalWindowsAlertTest {
-    @Test
-    public void alertTest() {
+    public static void main(String[] args) {
         System.setProperty("webdriver.chrome.driver", "C:\\webdrivers\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -48,7 +46,5 @@ public class ModalWindowsAlertTest {
         } finally {
             driver.quit();
         }
-
-
     }
 }
